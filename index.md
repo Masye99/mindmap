@@ -1,3 +1,9 @@
+---
+title: Wiki Index
+created: 2026-09-14
+updated: 2026-09-14
+type: index
+---
 # Wiki Index
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
