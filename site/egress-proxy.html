@@ -1,0 +1,40 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><title>Egress Proxy (iron-proxy)</title>
+<link rel=stylesheet href=style.css></head><body>
+<nav><a href=index.html>Index</a> | <a href=log.html>Log</a></nav>
+<h1>Egress Proxy (iron-proxy)</h1>
+<div class=fm>Type: concept | Tags: proxy  docker  hermes  troubleshooting | Updated: 2026-09-14</div>
+
+<h1>Egress Proxy (iron-proxy)</h1>
+
+<p>A TLS-intercepting proxy that swaps opaque proxy tokens for real upstream API</p>
+<p>credentials at the network boundary, so sandboxes never hold real keys.</p>
+
+<h2>How it works</h2>
+<p>- Docker sandbox sends CONNECT/HTTP forward to iron-proxy (host:9090)</p>
+<p>- iron-proxy mints a leaf cert from its CA, matching the proxy token</p>
+<p>- It swaps the secret for the real upstream key (OpenRouter, OpenAI, etc.)</p>
+<p>- Sandboxes only ever see proxy tokens + CA cert</p>
+
+<h2>Commands</h2>
+<pre>
+<p>hermes egress install      # download the pinned binary</p>
+<p>hermes egress setup        # wizard: CA, mappings, proxy.yaml</p>
+<p>hermes egress start        # spawn the proxy daemon</p>
+<p>hermes egress status       # binary + config + pid + listening state</p>
+<p>hermes egress disable      # flip proxy.enabled = false</p>
+<pre>
+
+<h2>Windows gotcha (v0.39.0)</h2>
+<p>iron-proxy does **not** ship native Windows binaries. It must run on</p>
+<p>Linux/macOS/WSL. On a Windows host, the clean fix is to disable it:</p>
+<pre>
+<p>hermes egress disable</p>
+<pre>
+<p>This makes the feature a complete no-op — the Docker sandbox starts normally</p>
+<p>and reads real credentials directly from `~/.hermes/.env`.</p>
+
+<h2>Related</h2>
+<p>- <a href="hermes-agent.html">[hermes-agent]</a> — the agent framework</p>
+<p>- <a href="telegram-bot.html">[telegram-bot]</a> — where we hit the proxy error during setup</p>
+<hr><p class=src>Sources: [raw/transcripts/session-egress-troubleshooting.md]</p>
+</body></html>

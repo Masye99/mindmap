@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><title>Hermes Agent</title>
+<link rel=stylesheet href=style.css></head><body>
+<nav><a href=index.html>Index</a> | <a href=log.html>Log</a></nav>
+<h1>Hermes Agent</h1>
+<div class=fm>Type: entity | Tags: hermes  setup  reference | Updated: 2026-09-14</div>
+
+<h1>Hermes Agent</h1>
+
+<p>Hermes Agent is an open-source AI agent framework by Nous Research. It runs in</p>
+<p>the terminal, a native desktop app, messaging platforms, and IDEs.</p>
+
+<h2>What we set up</h2>
+<p>- **Desktop app** — the chat surface we use (Electron, native)</p>
+<p>- **Telegram bot** — messaging gateway connecting Telegram to the agent</p>
+<p>- **Cron jobs** — scheduled tasks (e.g. bills &amp; renewals reminder)</p>
+<p>- **Skills** — procedural memory for recurring task types</p>
+
+<h2>Key paths</h2>
+<pre>
+<p>~/.hermes/config.yaml       Main configuration</p>
+<p>~/.hermes/.env              API keys and secrets</p>
+<p>~/.hermes/skills/           Installed skills</p>
+<p>~/.hermes/state.db          Session store (SQLite + FTS5)</p>
+<p>~/.hermes/sessions/         Gateway routing index</p>
+<pre>
+
+<h2>Related</h2>
+<p>- <a href="telegram-bot.html">[telegram-bot]</a> — our Telegram messaging setup</p>
+<p>- <a href="messaging-gateway.html">[messaging-gateway]</a> — the background process</p>
+<p>- <a href="egress-proxy.html">[egress-proxy]</a> — sandbox credential isolation</p>
+<hr><p class=src>Sources: [raw/transcripts/session-telegram-bot-setup.md]</p>
+</body></html>

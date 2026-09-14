@@ -1,0 +1,7 @@
+body{font-family:system-ui,sans-serif;max-width:760px;margin:24px auto;padding:0 16px;line-height:1.55}
+nav{border-bottom:1px solid #ccc;padding-bottom:8px;margin-bottom:16px}
+h1{font-size:1.6em}h2{font-size:1.2em;margin-top:1.4em}
+.fm{background:#f4f4f4;padding:8px 12px;border-radius:6px;font-size:.85em}
+.src{color:#888;font-size:.85em}
+pre{background:#f7f7f7;padding:10px;overflow-x:auto}
+a{color:#06c}

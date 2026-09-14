@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><title>Messaging Gateway</title>
+<link rel=stylesheet href=style.css></head><body>
+<nav><a href=index.html>Index</a> | <a href=log.html>Log</a></nav>
+<h1>Messaging Gateway</h1>
+<div class=fm>Type: concept | Tags: hermes  gateway  automation | Updated: 2026-09-14</div>
+
+<h1>Messaging Gateway</h1>
+
+<p>The single background process that connects all configured chat platforms to</p>
+<p>the agent. It handles sessions, runs cron jobs, and delivers voice messages.</p>
+
+<h2>Architecture</h2>
+<p>- Platform adapters (Telegram, Discord, Slack, WhatsApp, ...) receive messages</p>
+<p>- Per-chat session store routes each conversation</p>
+<p>- Messages dispatch to the AIAgent for processing</p>
+<p>- Cron scheduler ticks every 60s to execute due jobs</p>
+
+<h2>Commands</h2>
+<pre>
+<p>hermes gateway              # run in foreground</p>
+<p>hermes gateway setup        # interactive platform configuration</p>
+<p>hermes gateway install      # install as a background service</p>
+<p>hermes gateway start/stop   # manage the service</p>
+<p>hermes gateway status       # check status</p>
+<pre>
+
+<h2>Platforms</h2>
+<p>Telegram, Discord, Slack, WhatsApp, Signal, SMS, Email, Home Assistant,</p>
+<p>Mattermost, Matrix, DingTalk, Feishu/Lark, WeCom, Weixin, iMessage, QQ,</p>
+<p>Teams, LINE, ntfy, and more.</p>
+
+<h2>Related</h2>
+<p>- <a href="telegram-bot.html">[telegram-bot]</a> — our Telegram setup</p>
+<p>- <a href="hermes-agent.html">[hermes-agent]</a> — the agent framework</p>
+<hr><p class=src>Sources: [raw/transcripts/session-telegram-bot-setup.md]</p>
+</body></html>

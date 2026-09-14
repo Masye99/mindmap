@@ -1,0 +1,37 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><title>Telegram Bot</title>
+<link rel=stylesheet href=style.css></head><body>
+<nav><a href=index.html>Index</a> | <a href=log.html>Log</a></nav>
+<h1>Telegram Bot</h1>
+<div class=fm>Type: entity | Tags: telegram  hermes  bot  setup | Updated: 2026-09-14</div>
+
+<h1>Telegram Bot</h1>
+
+<p>Our Telegram messaging bot, connected via the Hermes gateway.</p>
+
+<h2>Setup</h2>
+<p>1. Message @BotFather in Telegram -&gt; /newbot -&gt; pick name + username -&gt; get token</p>
+<p>2. `hermes gateway setup` -&gt; select Telegram -&gt; paste token</p>
+<p>3. `hermes gateway start` (or `hermes gateway install` for background service)</p>
+
+<h2>Capabilities</h2>
+<p>- **Voice** — voice notes transcribed, spoken replies (`/voice on`)</p>
+<p>- **Images &amp; files** — send/receive photos, files, reports</p>
+<p>- **Real work** — terminal commands, web browsing, file read/write, subagents</p>
+<p>- **Cron jobs** — scheduled tasks delivered to Telegram</p>
+<p>- **Background sessions** — `/bg &lt;prompt&gt;` for long tasks</p>
+
+<h2>Chat commands</h2>
+<p>| Command | Description |</p>
+<p>|---------|-------------|</p>
+<p>| `/new` | Start fresh conversation |</p>
+<p>| `/model` | Swap models mid-chat |</p>
+<p>| `/status` | Session info |</p>
+<p>| `/sethome` | Set this chat as home channel |</p>
+<p>| `/approve` / `/deny` | Approve/reject dangerous commands |</p>
+<p>| `/sessions` | List/resume past sessions |</p>
+
+<h2>Related</h2>
+<p>- <a href="hermes-agent.html">[hermes-agent]</a> — the agent framework</p>
+<p>- <a href="messaging-gateway.html">[messaging-gateway]</a> — the background process</p>
+<hr><p class=src>Sources: [raw/transcripts/session-telegram-bot-setup.md]</p>
+</body></html>
